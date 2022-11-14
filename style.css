@@ -1,4 +1,14 @@
 .body{
-  font-size: 4rem;
+  font-size: 80rem;
   text-align: center;
+}
+
+.blink-animate{
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
