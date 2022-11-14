@@ -1,14 +1,37 @@
-.body{
-  font-size: 80rem;
-  text-align: center;
-}
-
 .blink-animate{
   animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
   50% {
+    opacity: 0;
+  }
+}
+
+.fade-in-animate{
+  animation: fadeIn ease 3s;
+  animation-iteration-count: 5;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-out-animate{
+  animation: fadeOut ease 3s;
+  animation-iteration-count: 5;
+  animation-fill-mode: backwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
