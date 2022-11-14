@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -25,6 +26,19 @@
         <option value="wipe-down">Wipe Down</option>
         <option value="pop">Pop</option>
     </select>
+    <div id="animate-container">
+        <div class="static-animate">
+            <p>This is Static</p>
+        </div>
+
+        <div class="scroll-right-animate">
+            <marquee behavior="scroll" direction="left"><p>This is Scroll-Right</p></marquee>
+        </div>
+
+        <div class="scroll-left-animate">
+            <marquee behavior="scroll" direction="right"><p>This is Scroll-Left</p></marquee>
+        </div>
+    </div>
 </body>
 
 </html>
