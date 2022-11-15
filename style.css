@@ -1,4 +1,157 @@
-.blink-animate{
+/* .animate{
+  display: none;
+} */
+
+/* .static-animate{
+  display: none;
+} */
+
+.scroll-right.animate{
+  text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  
+  -moz-animation: scrollRight 15s linear infinite;
+  -webkit-animation: scrollRight 15s linear infinite;
+  animation: scrollRight 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes scrollRight {
+  from { -moz-transform: translateX(-100%); }
+  to { -moz-transform: translateX(100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes scrollRight {
+  from { -webkit-transform: translateX(-100%); }
+  to { -webkit-transform: translateX(100%); }
+}
+
+@keyframes scrollRight {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.scroll-left.animate{
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: scrollLeft 15s linear infinite;
+  -webkit-animation: scrollLeft 15s linear infinite;
+  animation: scrollLeft 15s linear infinite;
+}
+
+@-webkit-keyframes scrollLeft {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scrollLeft {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-up.animate{
+  height: 100%;
+  text-align: center;
+  
+  /* animation properties */
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  
+  -moz-animation: scrollUp 2s linear infinite;
+  -webkit-animation: scrollUp 2s linear infinite;
+  animation: scrollUp 2s linear infinite;
+}
+
+
+/* for Firefox */
+@-moz-keyframes scrollUp {
+  from { -moz-transform: translateY(100%); }
+  to { -moz-transform: translateY(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes scrollUp {
+  from { -webkit-transform: translateY(100%); }
+  to { -webkit-transform: translateY(-100%); }
+}
+
+@keyframes scrollUp {
+  from {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.scroll-down.animate{
+  height: 100%;
+  text-align: center;
+  
+  /* animation properties */
+  -moz-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  
+  -moz-animation: scrollDown 2s linear infinite;
+  -webkit-animation: scrollDown 2s linear infinite;
+  animation: scrollDown 2s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes scrollDown {
+  from { -moz-transform: translateY(-100%); }
+  to { -moz-transform: translateY(100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes scrollDown {
+  from { -webkit-transform: translateY(-100%); }
+  to { -webkit-transform: translateY(100%); }
+}
+
+@keyframes scrollDown {
+  from {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+.blink.animate{
   animation: blinker 1s linear infinite;
 }
 
@@ -8,9 +161,9 @@
   }
 }
 
-.fade-in-animate{
+.fade-in.animate{
   animation: fadeIn ease 3s;
-  animation-iteration-count: 5;
+  animation-iteration-count: 50000;
   animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
@@ -22,12 +175,25 @@
   }
 }
 
-.fade-out-animate{
+.fade-out.animate{
   animation: fadeOut ease 3s;
-  animation-iteration-count: 5;
+  animation-iteration-count: 50000;
   animation-fill-mode: backwards;
 }
 @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.wipe-left.animate{
+  animation: wipeLeft ease 3s;
+  animation-delay: 2s;
+}
+@keyframes wipeLeft{
   0% {
     opacity: 1;
   }
