@@ -2,9 +2,13 @@
   display: none;
 } */
 
-/* .static-animate{
-  display: none;
-} */
+p{
+  font-size: larger;
+}
+
+.static.animate{
+  text-align: center;
+}
 
 .scroll-right.animate{
   text-align: right;
@@ -152,6 +156,7 @@
 }
 
 .blink.animate{
+  text-align: center;
   animation: blinker 1s linear infinite;
 }
 
@@ -162,6 +167,7 @@
 }
 
 .fade-in.animate{
+  text-align: center;
   animation: fadeIn ease 3s;
   animation-iteration-count: 50000;
   animation-fill-mode: forwards;
